@@ -76,7 +76,7 @@ impl BounceRootState {
     where
         T: 'static,
     {
-        let notion_states = self.notion_states.borrow();
+        let notion_states = self.notion_states.borrow().clone();
 
         let notion = notion as Rc<dyn Any>;
 
